@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	form.search-form
+		input(type="text").search-text
+		input(type="submit")
+		
+	script(src='/javascripts/images.js')
