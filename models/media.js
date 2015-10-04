@@ -17,7 +17,6 @@ function find(tagName, callback) {
 			body += chunk;
 		});
 		res.on('end', function(res){
-console.log( body );
 			ret = JSON.parse(body);
 			callback(null, body);
 		});

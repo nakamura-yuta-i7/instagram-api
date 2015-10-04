@@ -13,6 +13,7 @@ function JqueryAjax() {
 			url      : params.url || "/",
 			data     : params.data || {},
 			context  : params.context || document,
+			beforeSend : params.beforeSend || function(data) { console.debug( data ) },
 			success  : params.success || function(data){ console.debug( data ); }
 		});
 	}
@@ -43,6 +44,7 @@ function JqueryAjax() {
 			contentType: false, // FormData使う場合、必須
 			processData: false, // FormData使う場合、必須
 			context  : params.context || document,
+			beforeSend : params.beforeSend || function(data) { console.debug( data ) },
 			success  : params.success || function(data){ console.debug( data ); },
 			xhr      : params.xhr || function(){
 				XHR = $.ajaxSettings.xhr();
